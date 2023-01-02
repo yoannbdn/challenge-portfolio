@@ -11,24 +11,38 @@
 <body>
   <header>
     <nav class="navbar navbar--top">
-      <p class="heading heading--m">adamkeyes</p>
-      <ul>
-        <li><a href="https://github.com/yoannbdn"><img src="./assets/images/icon-github.svg" alt="icon-github"></a></li>
-        <li><a href="https://www.frontendmentor.io/profile/yoannbdn"><img src="./assets/images/icon-frontend-mentor.svg" alt="icon-frontendmentor"></a></li>
-        <li><a href="https://www.linkedin.com/in/yoann-baudrin-235302245/"><img src="./assets/images/icon-linkedin.svg" alt="icon-linkedin"></a></li>
-        <li><a href="https://twitter.com/yoann_bdn"><img src="./assets/images/icon-twitter.svg" alt="icon-twitter"></a></li>
+      <p class="navbar__heading">adamkeyes</p>
+      <ul class="social-icons-menu">
+        <li>
+          <a href="https://github.com/yoannbdn">
+            <img class="social-icon" src="./assets/images/icon-github.svg" alt="icon-github">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.frontendmentor.io/profile/yoannbdn">
+            <img class="social-icon" src="./assets/images/icon-frontend-mentor.svg" alt="icon-frontendmentor">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/yoann-baudrin-235302245/"><img class="social-icon" src="./assets/images/icon-linkedin.svg" alt="icon-linkedin">
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/yoann_bdn"><img class="social-icon" src="./assets/images/icon-twitter.svg" alt="icon-twitter">
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 <!--  -->
-  <div id="welcome" class="container">
-    <h1 class="heading heading--xl">Nice to meet you! I'm Adam Keyes.</h1>
-    <p>Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
-    <a href="#">Contact me</a>
-    <img id="profile-picture" src="" alt="">
+  <div id="welcome" class="welcome__container">
+    <img class="welcome__image-profile" src="./assets/images/image-profile-mobile.webp" alt="image-profile-mobile">
+    <h1 class="welcome__heading--mobile welcome__heading--l welcome__heading--xl">Nice to meet you! I'm <span class="underline-span">Adam Keyes</span>.</h1>
+    <p class="welcome__paragraph">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
+    <a class="welcome__contact-btn" href="#">Contact me</a>
   </div>
   <!--  -->
-  <span id="separator"></span>
+  <div class="separation-line"> </div>
   <!--  -->
   <div id="skills">
     HTML
@@ -50,10 +64,11 @@
     3 Years Experience
   </div>
   <!--  -->
-  <div id="projects">
+  <div id="projects" class="container">
     <h2>Projects</h2>
-    <a href="">Contact me</a>
-    Design portfolio
+    <a class="projects__contact-btn" href="">Contact me</a>
+<!-- Création d'une grid responsive -->
+    <!-- Design portfolio
     HTML CSS
     View project
     View code
@@ -81,7 +96,7 @@
     Art gallery showcase
     HTML CSS JavaScript
     View project
-    View code
+    View code -->
   </div>
   <footer>
     <div id="contact">
@@ -94,14 +109,18 @@
         <button>Send message</button>
       </form>
     </div>
-    <span class="separator"></span>
+    <div class="separation-line"></div>
     <nav class="navbar navbar--bottom">
-      <p class="heading heading--m">adamkeyes</p>
-      <ul class="social-icons">
-        <li><a href="https://github.com/yoannbdn"><img src="./assets/images/icon-github.svg" alt="icon-github"></a></li>
-        <li><a href="https://www.frontendmentor.io/profile/yoannbdn"><img src="./assets/images/icon-frontend-mentor.svg" alt="icon-frontendmentor"></a></li>
-        <li><a href="https://www.linkedin.com/in/yoann-baudrin-235302245/"><img src="./assets/images/icon-linkedin.svg" alt="icon-linkedin"></a></li>
-        <li><a href="https://twitter.com/yoann_bdn"><img src="./assets/images/icon-twitter.svg" alt="icon-twitter"></a></li>
+      <p class="navbar__heading">adamkeyes</p>
+      <ul class="social-icons-menu">
+        <li>
+          <a href="https://github.com/yoannbdn">
+            <img class="social-icon" src="./assets/images/icon-github.svg" alt="icon-github">
+          </a>
+        </li>
+        <li><a href="https://www.frontendmentor.io/profile/yoannbdn"><img class="social-icon" src="./assets/images/icon-frontend-mentor.svg" alt="icon-frontendmentor"></a></li>
+        <li><a href="https://www.linkedin.com/in/yoann-baudrin-235302245/"><img class="social-icon" src="./assets/images/icon-linkedin.svg" alt="icon-linkedin"></a></li>
+        <li><a href="https://twitter.com/yoann_bdn"><img class="social-icon" src="./assets/images/icon-twitter.svg" alt="icon-twitter"></a></li>
       </ul>
     </nav>
   </footer>

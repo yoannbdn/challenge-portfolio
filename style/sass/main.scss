@@ -23,51 +23,152 @@
             font-weight: normal;
             src: url(/assets/fonts/static/SpaceGrotesk-Medium.ttf);
         }
-        // Headings
-
-        @mixin basic-text{
-            font-family: 'SpaceGrotesk-Medium';
-            font-size: 18px;
-            line-height: 28px;
-            color: $white;
+        // Typography class - to extend
+        .__heading{
+            // Heading sizes
+            &--mobile{
+                font-family: 'SpaceGrotesk-Bold';
+                font-size: 40px;
+                line-height: 100%;
+                letter-spacing: -1.14px;
+                color: $white;
+            }
+            &--m{
+                font-family: 'SpaceGrotesk-Bold';
+                font-size: 24px;                    line-height: 32px;
+                color: $white;
+            }
+            &--l{
+                font-family: 'SpaceGrotesk-Bold';
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -1.5px;
+                color: $white;
+            }
+            &--xl{
+                font-family: 'SpaceGrotesk-Bold';
+                font-size: 88px;
+                line-height: 88px;
+                letter-spacing: -2.5px;
+                color: $white;
+            }
         }
-    // Buttons
+        .__parapraph{
+            font-family: 'SpaceGrotesk-Medium';
+            font-size: 16px;
+            line-height: 26px;
+            color: $light-grey;
+        }
+        // Buttons
+        .__contact-btn{
+            text-transform: uppercase;
+            text-decoration: none;
+            @extend .__parapraph;
+            border-bottom: 2px solid $neon-green;
+
+        }
 // Page style
 body{
     background-color: $very-dark-grey;
-}
-
-.heading{
-    font-family: 'SpaceGrotesk';
-    color: $white;
-    &--xl{
-        font-family: 'SpaceGrotesk-Bold';
-        font-size: 88px;
-        line-height: 88px;
-        letter-spacing: -2.5px;
-    }
-    &--l{
-        font-family: 'SpaceGrotesk-Bold';
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: -1.5px;
-    }
-    &--m{
-        font-family: 'SpaceGrotesk-Bold';
-        font-size: 24px;
-        line-height: 32px;
-    }
-}
-p{
-    @include basic-text()
-}
-
-// Navbars
-.navbar{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.social-icons{
+// Mobile first
+
+// Navbars
+.navbar{
+    height: 72px;
+    width: 154px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &--top{
+        margin-top: 20px
+    }
+    &--bottom{
+        margin: 20px 0 30px 0
+    }
+    &__heading{
+        @extend .__heading--m;
+    }
+}
+.social-icons-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.social-icon{
+    height: 19px;
+    width: 19px;
+    transition: ease-in-out 400ms;
+    &:hover{
+        filter: invert(25%) sepia(19%) saturate(1277%) hue-rotate(96deg) brightness(110%) contrast(86%);
+    }
+}
+
+// Welcome division
+#welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -90px;
+}
+.welcome__container{
+    z-index: -1;
+}
+.welcome{
+    &__heading--l{
+        @extend .__heading--mobile;
+        text-align: center;
+        margin-top: 40px;
+    }
+    &__image-profile{
+        width: 174px;
+        height: 383px;
+    }
+    &__paragraph{
+        @extend .__parapraph;
+        text-align: center;
+        margin: 24px 0 24px 0;
+    }
+    &__contact-btn{
+        @extend .__contact-btn;
+    }
+}
+.underline-span{
+    border-bottom: 4px solid $neon-green;
+}
+// Separation span
+.separation-line{
+    height: 1px;
+    width: 90%;
+    background-color: $white;
+}
+// Skils
+#skills{
+    margin-top: 40px;
+}
+//Projects
+.projects{
+    &__contact-btn{
+        @extend .__contact-btn;
+    }
+}
+
+
+
+
+
+
+
+// Footer
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

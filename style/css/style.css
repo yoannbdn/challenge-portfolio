@@ -1,4 +1,5 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -43,59 +44,63 @@ td, th {
   padding: 0;
 }
 
-@font-face {
-  font-family: "SpaceGrotesk";
-  src: url(/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "SpaceGrotesk-Bold";
-  font-weight: bold;
-  src: url(/assets/fonts/static/SpaceGrotesk-Bold.ttf);
-}
-@font-face {
-  font-family: "SpaceGrotesk-Medium";
-  font-weight: normal;
-  src: url(/assets/fonts/static/SpaceGrotesk-Medium.ttf);
-}
 .__heading--mobile, .welcome__heading--l {
-  font-family: "SpaceGrotesk-Bold";
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: -1.14px;
   color: #FFFFFF;
 }
 .__heading--m, .navbar__heading {
-  font-family: "SpaceGrotesk-Bold";
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   color: #FFFFFF;
 }
 .__heading--l {
-  font-family: "SpaceGrotesk-Bold";
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: -1.5px;
   color: #FFFFFF;
 }
 .__heading--xl {
-  font-family: "SpaceGrotesk-Bold";
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 88px;
   line-height: 88px;
   letter-spacing: -2.5px;
   color: #FFFFFF;
 }
 
-.__parapraph, .welcome__paragraph, .__contact-btn, .projects__contact-btn, .welcome__contact-btn {
-  font-family: "SpaceGrotesk-Medium";
+.__parapraph, .welcome__paragraph, .__contact-btn a, .projects__contact-btn a, .welcome__contact-btn a {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   color: #D9D9D9;
 }
 
-.__contact-btn, .projects__contact-btn, .welcome__contact-btn {
+.__contact-btn a, .projects__contact-btn a, .welcome__contact-btn a {
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 2px solid #4EE1A0;
+  transition: 400ms ease-in-out;
+}
+.__contact-btn .underline-btn, .projects__contact-btn .underline-btn, .welcome__contact-btn .underline-btn {
+  height: 2px;
+  width: 100%;
+  background-color: #4EE1A0;
+  transition: 400ms ease-in-out;
+}
+.__contact-btn:hover a, .projects__contact-btn:hover a, .welcome__contact-btn:hover a {
+  color: #4EE1A0;
+}
+.__contact-btn:hover .underline-btn, .projects__contact-btn:hover .underline-btn, .welcome__contact-btn:hover .underline-btn {
+  background-color: #FFFFFF;
+  transform: translateY(-28px);
 }
 
 body {
@@ -103,6 +108,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+header {
+  z-index: 2;
 }
 
 .navbar {
@@ -143,7 +152,7 @@ body {
 }
 
 .welcome__container {
-  z-index: -1;
+  z-index: 1;
 }
 
 .welcome__heading--l {

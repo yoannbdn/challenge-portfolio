@@ -163,6 +163,24 @@ header{
 #skills{
     margin-top: 40px;
 }
+.skills{
+    &__grid{
+        display: grid;
+        &--child{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__heading{
+        &--mobile{
+            @extend .__heading--mobile;
+        }
+    }
+    &__paragraph{
+        @extend .__parapraph;
+    }
+}
 //Projects
 .projects{
     &__contact-btn{
@@ -183,3 +201,26 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+
+// Partterns
+    // Rings
+    .pattern-ring{
+        position: absolute;
+        height: 130px;
+        width: 530px;
+        &__first{
+            top: 125px;
+            left: -50%;
+        }
+    }
+
+    // Circle
+    .pattern-circle{
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        &__first{
+            right: -20%;
+            top: 255px;
+        }
+    }

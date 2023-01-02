@@ -44,7 +44,7 @@ td, th {
   padding: 0;
 }
 
-.__heading--mobile, .welcome__heading--l {
+.__heading--mobile, .skills__heading--mobile, .welcome__heading--l {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -76,7 +76,7 @@ td, th {
   color: #FFFFFF;
 }
 
-.__parapraph, .welcome__paragraph, .__contact-btn a, .projects__contact-btn a, .welcome__contact-btn a {
+.__parapraph, .skills__paragraph, .welcome__paragraph, .__contact-btn a, .projects__contact-btn a, .welcome__contact-btn a {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -181,10 +181,38 @@ header {
   margin-top: 40px;
 }
 
+.skills__grid {
+  display: grid;
+}
+.skills__grid--child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pattern-ring {
+  position: absolute;
+  height: 130px;
+  width: 530px;
+}
+.pattern-ring__first {
+  top: 125px;
+  left: -50%;
+}
+
+.pattern-circle {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+}
+.pattern-circle__first {
+  right: -20%;
+  top: 255px;
 }
 
 /*# sourceMappingURL=style.css.map */

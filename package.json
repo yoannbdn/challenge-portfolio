@@ -1,0 +1,22 @@
+{
+  "name": "challenge-portfolio",
+  "version": "1.0.0",
+  "description": "![Design preview for the Single-page developer portfolio coding challenge](./preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch ./style/sass/main.scss:./style/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoannbdn/challenge-portfolio.git"
+  },
+  "author": "Yoann Baudrin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoannbdn/challenge-portfolio/issues"
+  },
+  "homepage": "https://github.com/yoannbdn/challenge-portfolio#readme",
+  "dependencies": {
+    "minireset.css": "^0.0.7"
+  }
+}

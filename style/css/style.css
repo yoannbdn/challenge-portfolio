@@ -90,4 +90,14 @@ p {
   color: #FFFFFF;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */

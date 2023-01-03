@@ -106,6 +106,9 @@
                 height: 107px;
                 padding-bottom: 81px;
             }
+            &:focus{
+                outline: $neon-green;
+            }
         }
         .__form--btn{
             padding-left: 0;

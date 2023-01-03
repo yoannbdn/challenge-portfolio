@@ -127,6 +127,9 @@ td, th {
   height: 107px;
   padding-bottom: 81px;
 }
+.__input:focus, .contact__form--inputmessage:focus, .contact__form--inputmail:focus, .contact__form--inputname:focus {
+  outline: #4EE1A0;
+}
 
 .__form--btn, .contact__form--btn {
   padding-left: 0;

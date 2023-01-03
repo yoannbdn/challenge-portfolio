@@ -98,6 +98,7 @@
 
             height: 43px;
             width: 100%;
+            @extend .__parapraph;
             &::placeholder{
                 @extend .__parapraph;
             }

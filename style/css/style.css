@@ -45,7 +45,7 @@ td, th {
   padding: 0;
 }
 
-.__heading--mobile, .skills__heading--mobile, .welcome__heading--l {
+.__heading--mobile, .projects__subtitles, .projects__description, .projects__heading--mobile, .skills__heading--mobile, .welcome__heading--l {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -77,7 +77,7 @@ td, th {
   color: #FFFFFF;
 }
 
-.__parapraph, .skills__paragraph, .welcome__paragraph, .__contact-btn a, .projects__contact-btn a, .welcome__contact-btn a {
+.__parapraph, .skills__paragraph, .welcome__paragraph, .__contact-btn a, .projects__access-btns--items a, .projects__contact-btn a, .welcome__contact-btn a {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -85,23 +85,32 @@ td, th {
   color: #D9D9D9;
 }
 
-.__contact-btn a, .projects__contact-btn a, .welcome__contact-btn a {
+.__contact-btn a, .projects__access-btns--items a, .projects__contact-btn a, .welcome__contact-btn a {
   text-transform: uppercase;
   text-decoration: none;
   transition: 400ms ease-in-out;
 }
-.__contact-btn .underline-btn, .projects__contact-btn .underline-btn, .welcome__contact-btn .underline-btn {
+.__contact-btn .underline-btn, .projects__access-btns--items .underline-btn, .projects__contact-btn .underline-btn, .welcome__contact-btn .underline-btn {
   height: 2px;
   width: 100%;
   background-color: #4EE1A0;
   transition: 400ms ease-in-out;
 }
-.__contact-btn:hover a, .projects__contact-btn:hover a, .welcome__contact-btn:hover a {
+.__contact-btn:hover a, .projects__access-btns--items:hover a, .projects__contact-btn:hover a, .welcome__contact-btn:hover a {
   color: #4EE1A0;
 }
-.__contact-btn:hover .underline-btn, .projects__contact-btn:hover .underline-btn, .welcome__contact-btn:hover .underline-btn {
+.__contact-btn:hover .underline-btn, .projects__access-btns--items:hover .underline-btn, .projects__contact-btn:hover .underline-btn, .welcome__contact-btn:hover .underline-btn {
   background-color: #FFFFFF;
   transform: translateY(-28px);
+}
+
+.__grid, .projects__grid, .skills__grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 1fr;
+}
+.__grid--child {
+  text-align: center;
 }
 
 body {
@@ -109,6 +118,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -144,25 +154,23 @@ header {
   filter: invert(25%) sepia(19%) saturate(1277%) hue-rotate(96deg) brightness(110%) contrast(86%);
 }
 
+.image-profile {
+  width: 174px;
+  height: 383px;
+  z-index: 1;
+  position: relative;
+  top: -50px;
+}
+
 #welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top: -90px;
-}
-
-.welcome__container {
-  z-index: 1;
 }
 
 .welcome__heading--l {
   text-align: center;
   margin-top: 40px;
-}
-.welcome__image-profile {
-  width: 174px;
-  height: 383px;
 }
 .welcome__paragraph {
   text-align: center;
@@ -176,20 +184,64 @@ header {
   height: 1px;
   width: 90%;
   background-color: #FFFFFF;
+  margin: 40px 0 80px 0;
 }
 
-#skills { /* Skills division */
-  margin-top: 40px;
-}
+#skills { /* Skills division */ }
 
 .skills__grid {
-  display: grid;
+  row-gap: 24px;
 }
 .skills__grid--child {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.projects {
+  width: 100%;
+}
+.projects__headbar {
+  padding: 0 16px 0 16px;
+  margin-bottom: 40px;
+  width: 375px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects__grid {
+  row-gap: 50px;
+}
+.projects__grid--child {
+  display: flex;
+  flex-direction: column;
+}
+.projects__miniature--mobile {
+  height: 253px;
+  width: 345px;
+}
+.projects__subtitles, .projects__description {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: larger;
+  margin: 20px 0 7px 0;
+}
+.projects__description {
+  display: flex;
+  font-size: 18px;
+  color: #D9D9D9;
+}
+.projects__description p {
+  margin: 0 18px 20px 0;
+}
+.projects__access-btns {
+  display: flex;
+  flex-direction: row;
+}
+.projects__access-btns--items {
+  margin-right: 32px;
+}
+
 footer {
   display: flex;
   flex-direction: column;

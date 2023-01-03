@@ -75,12 +75,21 @@
                 }
             }
         }
+        .__grid{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-auto-rows: 1fr;
+            &--child{
+                text-align: center;
+            }
+        }
 // Page style
 body{
     background-color: $very-dark-grey;
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-behavior: smooth;
 }
 // Navbars
 header{
@@ -116,27 +125,26 @@ header{
         filter: invert(25%) sepia(19%) saturate(1277%) hue-rotate(96deg) brightness(110%) contrast(86%);
     }
 }
+.image-profile{
+    width: 174px;
+    height: 383px;
+    z-index: 1;
+    position:relative;
+    top: -50px;
+}
 //---------------------
 // Welcome division
 #welcome{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -90px;
 }
-.welcome__container{
-    z-index: 1;
-}
+
 .welcome{
     &__heading--l{
         @extend .__heading--mobile;
         text-align: center;
         margin-top: 40px;
-    }
-    &__image-profile{
-        width: 174px;
-        height: 383px;
     }
     &__paragraph{
         @extend .__parapraph;
@@ -154,13 +162,14 @@ header{
     height: 1px;
     width: 90%;
     background-color: $white;
+    margin: 40px 0 80px 0;
 }
 #skills{ /* Skills division */
-    margin-top: 40px;
 }
 .skills{
     &__grid{
-        display: grid;
+        @extend .__grid;
+        row-gap: 24px;
         &--child{
             display: flex;
             flex-direction: column;
@@ -176,10 +185,64 @@ header{
         @extend .__parapraph;
     }
 }
-//Projects
+//---------------
+//Projects division
 .projects{
+    width: 100%;
+    &__headbar{
+        padding: 0 16px 0 16px;
+        margin-bottom: 40px;
+        width: 375px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__heading{
+        &--mobile{
+            @extend .__heading--mobile;
+        }
+    }
     &__contact-btn{
         @extend .__contact-btn;
+    }
+    &__grid{
+        @extend .__grid;
+        row-gap: 50px;
+        &--child{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__miniature{
+        &--mobile{
+            height: 253px;
+            width: 345px;
+        }
+    }
+    &__subtitles{
+        @extend .__heading--mobile;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: larger;
+        margin: 20px 0 7px 0;
+    }
+    &__description{
+        @extend .projects__subtitles;
+        display: flex;
+        font-size: 18px;
+        color: $light-grey;
+        p{
+            margin: 0 18px 20px 0;
+        }
+    }
+    &__access-btns{
+        display: flex;
+        flex-direction: row;
+        &--items{
+            @extend .__contact-btn;
+            margin-right: 32px;
+        }
     }
 }
 // Footer

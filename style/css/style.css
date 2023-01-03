@@ -116,6 +116,7 @@ td, th {
 .__input, .contact__form--inputmessage, .contact__form--inputmail, .contact__form--inputname {
   background: none;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #FFFFFF;
   margin-bottom: 32px;
   padding-left: 24px;

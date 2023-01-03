@@ -77,7 +77,7 @@ td, th {
   color: #FFFFFF;
 }
 
-.__parapraph, .contact__paragraph, .skills__paragraph, .welcome__paragraph, .__contact-btn a, .projects__access-btns--items a, .projects__contact-btn a, .welcome__contact-btn a {
+.__parapraph, .contact__paragraph, .skills__paragraph, .welcome__paragraph, .__form--btn, .contact__form--btn, .__input::placeholder, .contact__form--inputmessage::placeholder, .contact__form--inputmail::placeholder, .contact__form--inputname::placeholder, .__contact-btn a, .projects__access-btns--items a, .projects__contact-btn a, .welcome__contact-btn a {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -116,6 +116,29 @@ td, th {
 .__input, .contact__form--inputmessage, .contact__form--inputmail, .contact__form--inputname {
   background: none;
   border: none;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 32px;
+  padding-left: 24px;
+  padding-bottom: 16px;
+  height: 43px;
+  width: 100%;
+}
+.__input--message, .contact__form--inputmessage {
+  height: 107px;
+  padding-bottom: 81px;
+}
+
+.__form--btn, .contact__form--btn {
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  border-bottom: 2px solid #4EE1A0;
+  background: none;
+  transition: 400ms ease-in-out;
+  text-transform: uppercase;
+}
+.__form--btn:hover, .contact__form--btn:hover {
+  color: #4EE1A0;
 }
 
 body {
@@ -142,7 +165,7 @@ header {
   margin-top: 20px;
 }
 .navbar--bottom {
-  margin: 20px 0 30px 0;
+  margin: 20px auto 30px auto;
 }
 .social-icons-menu {
   width: 100%;
@@ -189,7 +212,7 @@ header {
   height: 1px;
   width: 90%;
   background-color: #FFFFFF;
-  margin: 40px 0 80px 0;
+  margin: 40px auto 80px auto;
 }
 
 #skills { /* Skills division */ }
@@ -224,6 +247,7 @@ header {
 .projects__grid--child {
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
 }
 .projects__miniature--mobile {
   height: 253px;
@@ -251,6 +275,10 @@ header {
   margin-right: 32px;
 }
 
+#contact {
+  height: auto;
+}
+
 footer {
   background-color: #242424;
 }
@@ -268,9 +296,10 @@ footer {
 }
 .contact__form {
   margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.contact__form--btn {
+  margin-left: 66%;
+  margin-bottom: 47px;
 }
 .pattern-ring {
   position: absolute;

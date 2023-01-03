@@ -67,7 +67,7 @@
             }
             &:hover{
                 a{
-                    color: #4EE1A0;
+                    color: $neon-green;
                 }
                 .underline-btn{
                     background-color: $white;
@@ -75,6 +75,8 @@
                 }
             }
         }
+        
+        // Grid
         .__grid{
             display: grid;
             grid-template-columns: 100%;
@@ -83,9 +85,39 @@
                 text-align: center;
             }
         }
+        // Form
         .__input{
             background: none;
             border: none;
+            border-bottom: 1px solid $white;
+
+            margin-bottom: 32px;
+
+            padding-left: 24px;
+            padding-bottom: 16px;
+
+            height: 43px;
+            width: 100%;
+            &::placeholder{
+                @extend .__parapraph;
+            }
+            &--message{
+                height: 107px;
+                padding-bottom: 81px;
+            }
+        }
+        .__form--btn{
+            padding-left: 0;
+            padding-right: 0;
+            border: none;
+            border-bottom: 2px solid $neon-green;
+            background: none;
+            transition: 400ms ease-in-out;
+            @extend .__parapraph;
+            text-transform: uppercase;
+            &:hover{
+                color: $neon-green;
+            }
         }
 // Page style
 body{
@@ -110,7 +142,7 @@ header{
         margin-top: 20px
     }
     &--bottom{
-        margin: 20px 0 30px 0
+        margin: 20px auto 30px auto
     }
     &__heading{
         @extend .__heading--m;
@@ -166,7 +198,7 @@ header{
     height: 1px;
     width: 90%;
     background-color: $white;
-    margin: 40px 0 80px 0;
+    margin: 40px auto 80px auto;
 }
 #skills{ /* Skills division */
 }
@@ -219,6 +251,7 @@ header{
         &--child{
             display: flex;
             flex-direction: column;
+            margin-left: 16px;
         }
     }
     &__miniature{
@@ -254,7 +287,7 @@ header{
 }
 // Footer & Contact
 #contact{
-//
+    height: auto;
 }
 footer{
     background-color: #242424;
@@ -275,9 +308,6 @@ footer{
     }
     &__form{
         margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         &--inputname{
             @extend .__input;
         }
@@ -286,7 +316,16 @@ footer{
         }
         &--inputmessage{
             @extend .__input;
+            @extend .__input--message;
         }
+        &--btn{
+            @extend .__form--btn;
+            margin-left: 66%;
+            margin-bottom: 47px;
+        }
+    }
+    &__form--inputmessage::placeholder{
+        
     }
 }
 // Partterns

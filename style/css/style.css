@@ -186,8 +186,7 @@ header {
   width: 174px;
   height: 383px;
   z-index: 1;
-  position: relative;
-  top: -50px;
+  margin-top: -100px;
 }
 
 #welcome {
@@ -212,7 +211,15 @@ header {
   height: 1px;
   width: 90%;
   background-color: #FFFFFF;
+}
+.separation-line--first {
+  margin: 80px auto 40px auto;
+}
+.separation-line--second {
   margin: 40px auto 80px auto;
+}
+.separation-line--third {
+  margin: 87px auto 39px auto;
 }
 
 #skills { /* Skills division */ }
@@ -299,8 +306,8 @@ footer {
 }
 .contact__form--btn {
   margin-left: 66%;
-  margin-bottom: 47px;
 }
+
 .pattern-ring {
   position: absolute;
   height: 130px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -171,13 +172,13 @@ header {
   border-bottom: 4px solid #4EE1A0;
 }
 
-.separation-line {
+.separation-line { /* Ligne de séparation */
   height: 1px;
   width: 90%;
   background-color: #FFFFFF;
 }
 
-#skills {
+#skills { /* Skills division */
   margin-top: 40px;
 }
 

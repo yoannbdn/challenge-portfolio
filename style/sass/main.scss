@@ -12,7 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
         // Typography class - to extend
         .__heading{
-            // Heading sizes
+            // Text format
             &--mobile{
                 font-family: 'Space Grotesk', sans-serif;
                 font-weight: 700;
@@ -82,8 +82,6 @@ body{
     flex-direction: column;
     align-items: center;
 }
-// Mobile first
-
 // Navbars
 header{
     z-index: 2;
@@ -109,7 +107,6 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-
 }
 .social-icon{
     height: 19px;
@@ -119,7 +116,7 @@ header{
         filter: invert(25%) sepia(19%) saturate(1277%) hue-rotate(96deg) brightness(110%) contrast(86%);
     }
 }
-
+//---------------------
 // Welcome division
 #welcome{
     display: flex;
@@ -153,14 +150,12 @@ header{
 .underline-span{
     border-bottom: 4px solid $neon-green;
 }
-// Separation span
-.separation-line{
+.separation-line{ /* Ligne de séparation */
     height: 1px;
     width: 90%;
     background-color: $white;
 }
-// Skils
-#skills{
+#skills{ /* Skills division */
     margin-top: 40px;
 }
 .skills{
@@ -187,21 +182,12 @@ header{
         @extend .__contact-btn;
     }
 }
-
-
-
-
-
-
-
 // Footer
-
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 // Partterns
     // Rings
     .pattern-ring{
@@ -213,7 +199,6 @@ footer{
             left: -50%;
         }
     }
-
     // Circle
     .pattern-circle{
         position: absolute;

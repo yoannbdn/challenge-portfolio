@@ -83,6 +83,10 @@
                 text-align: center;
             }
         }
+        .__input{
+            background: none;
+            border: none;
+        }
 // Page style
 body{
     background-color: $very-dark-grey;
@@ -187,6 +191,9 @@ header{
 }
 //---------------
 //Projects division
+#projects{
+    margin-bottom: 80px;
+}
 .projects{
     width: 100%;
     &__headbar{
@@ -245,11 +252,42 @@ header{
         }
     }
 }
-// Footer
+// Footer & Contact
+#contact{
+//
+}
 footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #242424;
+}
+.contact{
+    margin-top: 60px;
+    padding: 0 16px 0 16px;
+    &__heading{
+        &--mobile{
+            @extend .__heading--mobile;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    &__paragraph{
+        @extend .__parapraph;
+        text-align: center;
+    }
+    &__form{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--inputname{
+            @extend .__input;
+        }
+        &--inputmail{
+            @extend .__input;
+        }
+        &--inputmessage{
+            @extend .__input;
+        }
+    }
 }
 // Partterns
     // Rings

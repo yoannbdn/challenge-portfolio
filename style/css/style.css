@@ -45,6 +45,32 @@ td, th {
   padding: 0;
 }
 
+/*@keyframes borderShake {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateY(-8px);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateY(8px);
+    }
+
+    80% {
+        transform: translateY(6.4px);
+    }
+
+    90% {
+        transform: translateY(-6.4px);
+    }
+}*/
 .__heading--mobile, .contact__heading--mobile, .projects__subtitles, .projects__description, .projects__heading--mobile, .skills__heading--mobile, .welcome__heading--l {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
@@ -117,6 +143,7 @@ td, th {
   background: none;
   border: none;
   border-radius: 0;
+  outline: none;
   border-bottom: 1px solid #FFFFFF;
   margin-bottom: 32px;
   padding-left: 24px;
@@ -129,7 +156,9 @@ td, th {
   padding-bottom: 81px;
 }
 .__input:focus, .contact__form--inputmessage:focus, .contact__form--inputmail:focus, .contact__form--inputname:focus {
-  outline: #4EE1A0;
+  border-bottom: 3px solid #4EE1A0;
+  transition: 100ms ease-in-out;
+  /*animation: borderShake 5s ease-in-out 1s infinite normal forwards;*/
 }
 
 .__form--btn, .contact__form--btn {

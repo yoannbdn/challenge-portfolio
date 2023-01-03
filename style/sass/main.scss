@@ -1,5 +1,31 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-
+    // Keyframes
+    /*@keyframes borderShake {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+            transform: translateY(-8px);
+        }
+    
+        20%,
+        40%,
+        60% {
+            transform: translateY(8px);
+        }
+    
+        80% {
+            transform: translateY(6.4px);
+        }
+    
+        90% {
+            transform: translateY(-6.4px);
+        }
+    }*/
 // Theme
     // Colors :
     $very-dark-grey: #151515;
@@ -90,6 +116,7 @@
             background: none;
             border: none;
             border-radius: 0;
+            outline: none;
             border-bottom: 1px solid $white;
 
             margin-bottom: 32px;
@@ -108,7 +135,9 @@
                 padding-bottom: 81px;
             }
             &:focus{
-                outline: $neon-green;
+                border-bottom: 3px solid $neon-green;
+                transition: 100ms ease-in-out;
+                /*animation: borderShake 5s ease-in-out 1s infinite normal forwards;*/
             }
         }
         .__form--btn{
@@ -124,6 +153,7 @@
                 color: $neon-green;
             }
         }
+
 // Page style
 body{
     background-color: $very-dark-grey;

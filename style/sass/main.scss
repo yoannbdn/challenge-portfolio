@@ -105,8 +105,9 @@
         // Grid
         .__grid{
             display: grid;
-            grid-template-columns: 100%;
+            grid-template-columns: 1fr;
             grid-auto-rows: 1fr;
+            justify-items: center;
             &--child{
                 text-align: center;
             }
@@ -201,6 +202,9 @@ header{
     height: 383px;
     z-index: 1;
     margin-top: -100px;
+    background-image: url(/assets/images/image-profile-mobile.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 //---------------------
 // Welcome division
@@ -293,7 +297,7 @@ header{
         &--child{
             display: flex;
             flex-direction: column;
-            margin-left: 16px;
+
         }
     }
     &__miniature{
@@ -332,7 +336,11 @@ header{
     height: auto;
 }
 footer{
+    width: 100%;
     background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact{
     margin-top: 60px;
@@ -401,3 +409,83 @@ footer{
             width: 65px;
         }
     }
+
+@media only screen and (min-width : 767px) {
+    // Tablet design
+    header{
+        width: 100%;
+    }
+    .navbar{
+        width: 90%;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+    .social-icons-menu{
+        width: 20%;
+    }
+    .image-profile{
+        height: 600px;
+        width: 322px;
+        background-image: url(/assets/images/image-profile-tablet.webp);
+        position: relative;
+        left: 30%;
+    }
+
+    // Welcome div (Tablet)
+    #welcome{
+        position: absolute;
+        z-index: 3;
+        top: 10%;
+        align-items: center;
+        margin: 0 30% 0 30px;
+    }
+    .welcome{
+        &__heading{
+            text-align: left;
+            &--xl{
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: 700;
+                font-size: 88px;
+                line-height: 88px;
+                letter-spacing: -2.5px;
+                color: $white;
+            }
+        }
+        &__paragraph{
+            text-align: start;
+            margin-right: 10%;
+        }
+    }
+
+    // Skils div (Tablet)
+    .skills{
+        &__grid{
+            width: 90%;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 52px;
+            column-gap: 0;
+            justify-items: baseline;
+            &--child{
+                align-items: baseline;
+            }
+        }
+    }
+
+    // Projects div (tablet)
+    .projects{
+        &__headbar{
+            width: 100%;
+            padding: 0;
+        }
+        &__grid{
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 14px;
+        }
+    }
+
+    //Footer & contact (tablet)
+    .contact{
+        width: 445px;
+    }
+}

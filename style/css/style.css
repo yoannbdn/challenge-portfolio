@@ -132,8 +132,9 @@ td, th {
 
 .__grid, .projects__grid, .skills__grid {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
+  justify-items: center;
 }
 .__grid--child {
   text-align: center;
@@ -220,6 +221,9 @@ header {
   height: 383px;
   z-index: 1;
   margin-top: -100px;
+  background-image: url(/assets/images/image-profile-mobile.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #welcome {
@@ -287,7 +291,6 @@ header {
 .projects__grid--child {
   display: flex;
   flex-direction: column;
-  margin-left: 16px;
 }
 .projects__miniature--mobile {
   height: 253px;
@@ -320,7 +323,11 @@ header {
 }
 
 footer {
+  width: 100%;
   background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact {
@@ -373,6 +380,71 @@ footer {
   right: 0px;
   top: 255px;
   width: 65px;
+}
+
+@media only screen and (min-width: 767px) {
+  header {
+    width: 100%;
+  }
+  .navbar {
+    width: 90%;
+    flex-direction: row;
+    margin-left: 30px;
+  }
+  .social-icons-menu {
+    width: 20%;
+  }
+  .image-profile {
+    height: 600px;
+    width: 322px;
+    background-image: url(/assets/images/image-profile-tablet.webp);
+    position: relative;
+    left: 30%;
+  }
+  #welcome {
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    align-items: center;
+    margin: 0 30% 0 30px;
+  }
+  .welcome__heading {
+    text-align: left;
+  }
+  .welcome__heading--xl {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+    color: #FFFFFF;
+  }
+  .welcome__paragraph {
+    text-align: start;
+    margin-right: 10%;
+  }
+  .skills__grid {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 52px;
+    column-gap: 0;
+    justify-items: baseline;
+  }
+  .skills__grid--child {
+    align-items: baseline;
+  }
+  .projects__headbar {
+    width: 100%;
+    padding: 0;
+  }
+  .projects__grid {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 14px;
+  }
+  .contact {
+    width: 445px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

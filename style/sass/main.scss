@@ -437,7 +437,7 @@ footer{
         z-index: 3;
         top: 10%;
         align-items: center;
-        margin: 0 30% 0 30px;
+        margin: 0 29% 0 30px;
     }
     .welcome{
         &__heading{
@@ -487,5 +487,28 @@ footer{
     //Footer & contact (tablet)
     .contact{
         width: 445px;
+    }
+
+    //Patterns (Tablet)
+    .pattern-ring{
+        z-index: 3;
+        &__first{
+            top: 86px;
+            left: -30%;
+        }
+        &__second{
+            top: 950px;
+            left: 581px;
+        }
+        &__third{
+            top: 3060px;
+            right: 606px;
+        }
+    }
+    .pattern-circle{
+        &__first{
+            z-index: 3;
+            top: 464px;
+        }
     }
 }

@@ -406,7 +406,7 @@ footer {
     z-index: 3;
     top: 10%;
     align-items: center;
-    margin: 0 30% 0 30px;
+    margin: 0 29% 0 30px;
   }
   .welcome__heading {
     text-align: left;
@@ -444,6 +444,25 @@ footer {
   }
   .contact {
     width: 445px;
+  }
+  .pattern-ring {
+    z-index: 3;
+  }
+  .pattern-ring__first {
+    top: 86px;
+    left: -30%;
+  }
+  .pattern-ring__second {
+    top: 950px;
+    left: 581px;
+  }
+  .pattern-ring__third {
+    top: 3060px;
+    right: 606px;
+  }
+  .pattern-circle__first {
+    z-index: 3;
+    top: 464px;
   }
 }
 

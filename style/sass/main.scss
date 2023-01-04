@@ -162,6 +162,7 @@ body{
     flex-direction: column;
     align-items: center;
     scroll-behavior: smooth;
+    margin: 0 16px 0 16px;
 }
 // Navbars
 header{
@@ -178,7 +179,7 @@ header{
         margin-top: 20px
     }
     &--bottom{
-        margin: 20px auto 30px auto
+        margin: 20px 0 30px 0
     }
     &__heading{
         @extend .__heading--m;
@@ -234,16 +235,16 @@ header{
 }
 .separation-line{ /* Ligne de séparation */
     height: 1px;
-    width: 90%;
+    width: 100%;
     background-color: $white;
     &--first{
-        margin: 80px auto 40px auto;
+        margin: 80px 0 40px 0;
     }
     &--second{
-        margin: 40px auto 80px auto;
+        margin: 40px 0 80px 0;
     }
     &--third{
-        margin: 87px auto 39px auto;
+        margin: 87px 0 39px 0;
     }
 }
 #skills{ /* Skills division */
@@ -271,13 +272,13 @@ header{
 //Projects division
 #projects{
     margin-bottom: 80px;
+    width: 100%;
 }
 .projects{
     width: 100%;
     &__headbar{
-        padding: 0 16px 0 16px;
         margin-bottom: 40px;
-        width: 375px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -294,11 +295,6 @@ header{
     &__grid{
         @extend .__grid;
         row-gap: 50px;
-        &--child{
-            display: flex;
-            flex-direction: column;
-
-        }
     }
     &__miniature{
             height: 253px;
@@ -342,7 +338,7 @@ header{
     height: auto;
 }
 footer{
-    width: 100%;
+    width: 109.3%;
     background-color: #242424;
     display: flex;
     flex-direction: column;
@@ -418,13 +414,15 @@ footer{
 
 @media only screen and (min-width : 767px) {
     // Tablet design
+    body{
+        margin: 0 30px 0 30px;
+    }
     header{
         width: 100%;
     }
     .navbar{
-        width: 90%;
+        width: 100%;
         flex-direction: row;
-        margin-left: 30px;
     }
     .social-icons-menu{
         width: 20%;
@@ -434,7 +432,7 @@ footer{
         width: 322px;
         background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/image-profile-tablet.webp');
         position: relative;
-        left: 29%;
+        left: 31.9%;
     }
 
     // Welcome div (Tablet)
@@ -466,7 +464,7 @@ footer{
     // Skils div (Tablet)
     .skills{
         &__grid{
-            width: 90%;
+            width: 100%;
             grid-template-columns: 1fr 1fr;
             row-gap: 52px;
             column-gap: 0;
@@ -474,6 +472,12 @@ footer{
             &--child{
                 align-items: baseline;
             }
+        }
+    }
+
+    .separation-line{
+        &--second{
+            opacity: 0;
         }
     }
 
@@ -488,8 +492,15 @@ footer{
             grid-template-columns: 1fr 1fr;
             column-gap: 14px;
         }
+        &__miniature{
+            &--1{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-1-large.webp')}
+            &--2{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-2-large.webp')}
+            &--3{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-3-large.webp')}
+            &--4{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-4-large.webp')}
+            &--5{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-5-large.webp')}
+            &--6{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-6-large.webp')}
     }
-
+    }
     //Footer & contact (tablet)
     .contact{
         width: 445px;
@@ -515,6 +526,120 @@ footer{
         &__first{
             z-index: 3;
             top: 464px;
+        }
+    }
+}
+@media only screen and (min-width : 1439px) { // Desktop format
+    body{
+        margin : 0 165px 0 165px;
+    }
+    .navbar{
+        &--top{
+            padding-right: 43px;
+        }
+    }
+    .image-profile{
+        background-image: url(/assets/images/image-profile-desktop.webp);
+        height: 720px;
+        width: 445px;
+        left: 30%;
+    }
+
+    // Welcome DIV (Desktop)
+    #welcome{
+        margin: 0 39% 0 165px;
+        top: 15%;
+        align-items: baseline;
+    }
+    .welcome{
+        &__paragraph{
+            margin-top: 35px;
+            margin-bottom: 66px;
+            padding-right: 35%;
+        }
+        &__contact-btn{
+
+        }
+    }
+    .underline-span{
+        border-width: 6px;
+    }
+
+    #skills{ /* Skills div (Desktop)*/
+    }
+    .skills{
+        &__grid{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    #projects{ /* Projects div (Desktop) */
+    }
+
+    .projects{
+        &__grid{
+            //487
+            column-gap: 30px;
+            row-gap: 69px;
+            &--child{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &__miniature{
+            z-index: 3;
+            height: 400px;
+            width: 540px;
+            &--1{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-1-large.webp')}
+            &--2{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-2-large.webp')}
+            &--3{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-3-large.webp')}
+            &--4{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-4-large.webp')}
+            &--5{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-5-large.webp')}
+            &--6{background-image: url('https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-6-large.webp')}
+        }
+        &__access-btns{
+            height: 402px;
+            width: 540px;
+            position: relative;
+            top : -505px;
+            z-index: 4;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: hsla(0, 0%, 0%, 0.557);
+            opacity: 0;
+            transition: 200ms ease-in-out;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .projectcards{
+
+    }
+
+
+
+
+    // Patterns (Desktop)
+    .pattern-ring{
+        &__first{
+            top: 133px;
+            left: -100px;
+        }
+        &__second{
+            top: 980px;
+            left: 1149px;
+            width: 291px;
+        }
+        &__third{
+
+        }
+    }
+    .pattern-circle{
+        &__first{
+            right: 37.9%;
+            width: 130px;
+            top: 521px;
         }
     }
 }

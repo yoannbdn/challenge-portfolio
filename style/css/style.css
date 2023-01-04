@@ -181,6 +181,7 @@ body {
   flex-direction: column;
   align-items: center;
   scroll-behavior: smooth;
+  margin: 0 16px 0 16px;
 }
 
 header {
@@ -199,7 +200,7 @@ header {
   margin-top: 20px;
 }
 .navbar--bottom {
-  margin: 20px auto 30px auto;
+  margin: 20px 0 30px 0;
 }
 .social-icons-menu {
   width: 100%;
@@ -246,17 +247,17 @@ header {
 
 .separation-line { /* Ligne de séparation */
   height: 1px;
-  width: 90%;
+  width: 100%;
   background-color: #FFFFFF;
 }
 .separation-line--first {
-  margin: 80px auto 40px auto;
+  margin: 80px 0 40px 0;
 }
 .separation-line--second {
-  margin: 40px auto 80px auto;
+  margin: 40px 0 80px 0;
 }
 .separation-line--third {
-  margin: 87px auto 39px auto;
+  margin: 87px 0 39px 0;
 }
 
 #skills { /* Skills division */ }
@@ -271,15 +272,15 @@ header {
 }
 #projects {
   margin-bottom: 80px;
+  width: 100%;
 }
 
 .projects {
   width: 100%;
 }
 .projects__headbar {
-  padding: 0 16px 0 16px;
   margin-bottom: 40px;
-  width: 375px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -287,10 +288,6 @@ header {
 }
 .projects__grid {
   row-gap: 50px;
-}
-.projects__grid--child {
-  display: flex;
-  flex-direction: column;
 }
 .projects__miniature {
   height: 253px;
@@ -343,7 +340,7 @@ header {
 }
 
 footer {
-  width: 100%;
+  width: 109.3%;
   background-color: #242424;
   display: flex;
   flex-direction: column;
@@ -403,13 +400,15 @@ footer {
 }
 
 @media only screen and (min-width: 767px) {
+  body {
+    margin: 0 30px 0 30px;
+  }
   header {
     width: 100%;
   }
   .navbar {
-    width: 90%;
+    width: 100%;
     flex-direction: row;
-    margin-left: 30px;
   }
   .social-icons-menu {
     width: 20%;
@@ -419,7 +418,7 @@ footer {
     width: 322px;
     background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/image-profile-tablet.webp");
     position: relative;
-    left: 29%;
+    left: 31.9%;
   }
   #welcome {
     position: absolute;
@@ -444,7 +443,7 @@ footer {
     margin-right: 10%;
   }
   .skills__grid {
-    width: 90%;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     row-gap: 52px;
     column-gap: 0;
@@ -452,6 +451,9 @@ footer {
   }
   .skills__grid--child {
     align-items: baseline;
+  }
+  .separation-line--second {
+    opacity: 0;
   }
   .projects__headbar {
     width: 100%;
@@ -461,6 +463,24 @@ footer {
     width: 100%;
     grid-template-columns: 1fr 1fr;
     column-gap: 14px;
+  }
+  .projects__miniature--1 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-1-large.webp");
+  }
+  .projects__miniature--2 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-2-large.webp");
+  }
+  .projects__miniature--3 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-3-large.webp");
+  }
+  .projects__miniature--4 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-4-large.webp");
+  }
+  .projects__miniature--5 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-5-large.webp");
+  }
+  .projects__miniature--6 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-6-large.webp");
   }
   .contact {
     width: 445px;
@@ -483,6 +503,98 @@ footer {
   .pattern-circle__first {
     z-index: 3;
     top: 464px;
+  }
+}
+@media only screen and (min-width: 1439px) {
+  body {
+    margin: 0 165px 0 165px;
+  }
+  .navbar--top {
+    padding-right: 43px;
+  }
+  .image-profile {
+    background-image: url(/assets/images/image-profile-desktop.webp);
+    height: 720px;
+    width: 445px;
+    left: 30%;
+  }
+  #welcome {
+    margin: 0 39% 0 165px;
+    top: 15%;
+    align-items: baseline;
+  }
+  .welcome__paragraph {
+    margin-top: 35px;
+    margin-bottom: 66px;
+    padding-right: 35%;
+  }
+  .underline-span {
+    border-width: 6px;
+  }
+  #skills { /* Skills div (Desktop)*/ }
+  .skills__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #projects { /* Projects div (Desktop) */ }
+  .projects__grid {
+    column-gap: 30px;
+    row-gap: 69px;
+  }
+  .projects__grid--child {
+    height: 100%;
+    width: 100%;
+  }
+  .projects__miniature {
+    z-index: 3;
+    height: 400px;
+    width: 540px;
+  }
+  .projects__miniature--1 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-1-large.webp");
+  }
+  .projects__miniature--2 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-2-large.webp");
+  }
+  .projects__miniature--3 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-3-large.webp");
+  }
+  .projects__miniature--4 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-4-large.webp");
+  }
+  .projects__miniature--5 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-5-large.webp");
+  }
+  .projects__miniature--6 {
+    background-image: url("https://yoannbdn.github.io/challenge-portfolio/assets/images/thumbnail-project-6-large.webp");
+  }
+  .projects__access-btns {
+    height: 402px;
+    width: 540px;
+    position: relative;
+    top: -505px;
+    z-index: 4;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: hsla(0deg, 0%, 0%, 0.557);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+  }
+  .projects__access-btns:hover {
+    opacity: 1;
+  }
+  .pattern-ring__first {
+    top: 133px;
+    left: -100px;
+  }
+  .pattern-ring__second {
+    top: 980px;
+    left: 1149px;
+    width: 291px;
+  }
+  .pattern-circle__first {
+    right: 37.9%;
+    width: 130px;
+    top: 521px;
   }
 }
 

@@ -221,7 +221,7 @@ header {
   height: 383px;
   z-index: 1;
   margin-top: -100px;
-  background-image: url("/assets/images/image-profile-mobile.webp");
+  background-image: url("./assets/images/image-profile-mobile.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -352,7 +352,7 @@ footer {
   position: absolute;
   height: 130px;
   width: 530px;
-  background-image: url(/assets/images/pattern-rings.svg);
+  background-image: url("./assets/images/pattern-rings.svg");
   background-repeat: no-repeat;
 }
 .pattern-ring__first {
@@ -373,7 +373,7 @@ footer {
   position: absolute;
   height: 130px;
   width: 130px;
-  background-image: url(/assets/images/pattern-circle.svg);
+  background-image: url("./assets/images/pattern-circle.svg");
   background-repeat: no-repeat;
 }
 .pattern-circle__first {
@@ -397,7 +397,7 @@ footer {
   .image-profile {
     height: 600px;
     width: 322px;
-    background-image: url("/assets/images/image-profile-tablet.webp");
+    background-image: url("./assets/images/image-profile-tablet.webp");
     position: relative;
     left: 30%;
   }

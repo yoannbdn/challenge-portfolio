@@ -397,7 +397,7 @@ footer {
   .image-profile {
     height: 600px;
     width: 322px;
-    background-image: url(/assets/images/image-profile-tablet.webp);
+    background-image: url("/assets/images/image-profile-tablet.webp");
     position: relative;
     left: 30%;
   }
